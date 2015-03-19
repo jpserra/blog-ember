@@ -1,0 +1,32 @@
+<h1>Contact</h1>
+<div class="row">
+  <div class="col-md-6">
+    <p>Want to get in touch?</p>
+    <ul>
+      <li>{{#link-to 'phone'}}Phone{{/link-to}}</li>
+      <li>{{#link-to 'email'}}Email{{/link-to}}</li>
+    </ul>
+  </div>
+  <div class ="col-md-6">
+    {{outlet}}
+  </div>
+</div>
+{{#if isFormShowing}}
+<form >
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+
+  <div class="textarea">
+    <label>
+      <textarea class="form-control" rows="3"></textarea>
+    </label>
+  </div>
+  <button type="submit" {{action "submitContactForm"}} class="btn btn-default">Submit</button>
+</form>
+{{else}}
+<p>Or <a href="#"{{action "sendMessage"}}> click here</a> to send message</p>
+{{/if}}
+
+
