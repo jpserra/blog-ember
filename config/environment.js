@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'treehouse',
     environment: environment,
+    firebase: 'https://taske.firebaseio.com/',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -16,7 +17,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' maxcdn.bootstrapcdn.com ",
       'font-src': "'self' data:  fonts.gstatic.com localhost ",
-      'connect-src': "'self'",
+      'connect-src': "'self' wss://s-dal5-nss-33.firebaseio.com",
       'img-src': "'self' maxcdn.bootstrapcdn.com",
       'style-src': "'self' 'unsafe-inline' fonts.googleapis.com",
       'frame-src': " ",
